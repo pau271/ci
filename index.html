@@ -1,50 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Ti, Mi Amor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffccd5;
-            color: #d6336c;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            margin-top: 50px;
-        }
-        .heart {
-            color: red;
-            font-size: 2em;
-        }
-        .name {
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Amo Mucho Mi Amor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', cursive;
+      background: pink;
+      background-image: repeating-linear-gradient(45deg, #ffd6e8 0px, #ffd6e8 20px, #fff 20px, #fff 40px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      font-size: 2rem;
+      animation: float 4s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-200px) scale(1.2); opacity: 0; }
+    }
+
+    .envelope {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: #d1006f;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .open-button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .open-button:hover {
+      background: #d1006f;
+    }
+
+    .letter {
+      display: none;
+      text-align: left;
+      max-height: 70vh;
+      overflow-y: auto;
+      margin-top: 2rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .floating-word {
+      position: absolute;
+      font-size: 1.2rem;
+      color: #ff69b4;
+      animation: float 5s infinite ease-in-out;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Para Ti, <span class="name">NINI</span> ❤️</h1>
-        <p>Eres la persona más especial en mi vida y quiero recordarte cuánto te amo cada día.</p>
-        <p>No hay palabras suficientes para expresar lo mucho que significas para mí, NINI. Me importas más de lo que puedes imaginar, y cada momento a tu lado es un regalo que valoro con todo mi corazón.</p>
-        <p>Tu sonrisa ilumina mis días, tu voz es la melodía que calma mi alma, y tu amor es el tesoro más grande que tengo. No importa lo que pase, siempre estaré aquí para ti, apoyándote, cuidándote y amándote sin condiciones.</p>
-        <p>Eres mi felicidad, mi paz y mi razón de sonreír. Nunca olvides lo especial que eres y cuánto te amo.</p>
-        <p class="heart">💖💖💖</p>
-        <p>Con todo mi amor,</p>
-        <p><b>Tu persona especial, Pau</b></p>
-        <p><b>teamo</b></p>
+  <!-- Corazones animados -->
+  <div class="heart" style="top: 80%; left: 10%;">💕</div>
+  <div class="heart" style="top: 90%; left: 50%;">💕</div>
+  <div class="heart" style="top: 85%; left: 80%;">💕</div>
+  <div class="floating-word" style="top: 70%; left: 30%;">te amo</div>
+  <div class="floating-word" style="top: 65%; left: 60%;">te amo</div>
+  <div class="floating-word" style="top: 75%; left: 85%;">te amo</div>
+
+  <!-- Carta -->
+  <div class="envelope">
+    <div class="title">TE AMO MUCHO MI AMOR</div>
+    <button class="open-button" onclick="abrirCarta()">Abrir</button>
+    <div class="letter" id="carta">
+      Olateamo..ya no je kómo comenzar eto...
+
+      He intentado escribir tantas veces lo que siento, y siempre siento que se me quedan cortas las palabras, Que ni siquiera el amor más grande que puedo tener hacia ti se puede medir con palabras...
+      Pero aquí estoy, intentando encontrar la forma de describir todo lo que significas para mí. No sé si lo lograré, pero lo dare todo. Porque, de alguna forma, debo intentar hacer que entiendas lo que eres para mí.
+Desde que llegaste, todo cambió.
+Es increíble cómo una sola persona puede transformar por completo la vida de otra. Cómo puedes entrar en la vida de alguien y, con un solo gesto, una sola palabra, una sola sonrisa, cambiarlo todo. Desde el momento en que te conocí, mi mundo dejó de ser el mismo. Las cosas que antes me preocupaban, ahora son insignificantes. Lo único que importa, lo único que me hace sentido, eres tú.
+La manera en que me haces sentir es algo que no puedo explicar. Es como si todo el universo conspirara para que nuestros caminos se cruzaran en el momento justo. La forma en que tu risa puede iluminar mis días malos, cómo tu presencia me da paz, cómo simplemente estar cerca de ti me hace sentir completo.
+Te amo más de lo que las palabras pueden describir.
+Este "teamo" no es algo que se dice por costumbre. No es algo que se repite sin pensar. Es algo que sale de lo más profundo de mi ser, con cada latido de mi kosaron, con cada pensamiento, con cada respiración. Te amo de una manera que nunca supe que podía amar. Te amo de una manera que me cambia que me hace ver la vida de otra manera. Y lo que siento por ti no tiene límites, no tiene tiempo. Es un amor que crece cada día, que se fortalece con cada mirada, con cada palabra, con cada momento juntos,teamo.
+Te amo en los pequeños detalles. Te amo en la forma en que te preocupas por mí, en la suavidad de tu voz cuando me hablas,Te amo cuando me entiendes sin palabras, cuando compartimos silencios cómodos, cuando hacemos cosas simples yesas son las cosas que se convierten en recuerdos más valiosos parami.
+A veces pienso en lo afortunado que soy de haberte encontrado.de haberte conocido,
+Nunca imaginé que algo tan hermoso como lo que estamos viviendo fuera posible. Siempre había creído que el amor era algo complicado, algo que solo unos pocos podían experimentar de verdad. Pero aki estoy, viviéndolo contigo. Y en este momento, me siento más agradecido que nunca por tenerte a mi lado. Cada día contigo es un regalo. Cada momento juntos es una bendición. A tu lado, todo tiene sentido. A tu lado, siento que la vida tiene un propósito, y ese propósito es amarte. Cada vez que te miro, me siento más afortunado, más feliz. Y es tan fácil amarte. Tan fácil pensar en un futuro contigo, porque no hay duda de que el lugar donde quiero estar siempre es a tu lado.
+Lo que más quiero es verte feliz.
+Si hay algo que me da paz, es ver tu sonrisa. Saber que estás bien, que estás feliz. Porque tu felicidad es mi felicidad. Quiero ser la razón de tus risas, de tus momentos de calma, de tu bienestar. Quiero ser el apoyo que necesites, la persona en la que confíes, la que te haga sentir amado en cada momento. Y si alguna vez no te he mostrado lo suficiente cuánto te valoro, cuánto te aprecio, quiero que sepas que lo siento profundamente. Mi mayor deseo es verte bien, verte brillar, y ser quien te acompañe en cada paso de tu camino.
+No me importa cuántas veces tenga que demostrarte lo mucho que te amo. Porque a veces las palabras no son suficientes, pero mis acciones hablarán siempre por mí. Y estaré allí en los días soleados y en los días lluviosos. Siempre.
+Te amo con todo lo que soy.
+A veces siento que soy una mejor persona por estar a tu lado. Porque contigo he aprendido lo que realmente significa amar. He aprendido a dar sin esperar, a cuidar sin condición, a entregarme sin miedo. He aprendido a apreciar cada momento, a valorar cada abrazo, cada palabra. A tu lado, me siento más vivo. Me haces querer ser alguien mejor, alguien que merezca el amor que me das, alguien que te haga sentir tan especial como te mereces.
+Te amo con cada rincón de mi ser. Con lo que soy ahora, con lo que seré mañana. Con la persona que fui, con la persona que quiero ser. Mi amor por ti no se mide en palabras. No se mide en promesas. Se mide en mis actos, en mis ganas de quedarme, de serte fiel, de cuidarte, de hacerte feliz.
+Al final, solo quiero estar contigo.
+Porque no quiero nada más que eso. No necesito riquezas, no necesito lujos. Solo te necesito a ti. Tu amor es lo único que me hace sentir completo, lo único que realmente me importa. Y te prometo que te cuidaré siempre, que te amaré siempre, que nunca dejaré que sientas que no eres suficiente, porque lo eres más que todo.
+Solo tú eres mi todo. Solo tú ocupas mi corazón. Y si alguna vez dudas de cuánto te amo, quiero que recuerdes que lo que siento por ti no tiene fin. Te amo ahora y siempre, de una forma que no puedo poner en palabras, pero que espero que puedas sentir con cada gesto, con cada abrazo, con cada mirada.
+Te amo. Para siempre.
+Este amor que tengo por ti no tiene fecha, no tiene límites, no tiene barreras. Es un amor libre, eterno, profundo. Es el amor de toda una vida. Y aunque no sepa si soy suficiente, lo que sí sé es que te amo con todo lo que tengo, con todo lo que soy,Con todo mi ser.
+Desde que llegaste, mi vida dejó de ser la misma.
+Te conocí en un momento de mi vida en que ni siquiera sabía lo que me hacía falta. Pensaba que ya había encontrado mi camino, que todo estaba bien como estaba. Pero cuando apareciste, te convertiste en la personita que encendió todo lo que estaba dormido dentro de mí. De alguna manera, llegaste a mi vida para mostrarme lo que realmente es vivir, lo que es sentir y amar con toda la intensidad que tenemos en nuestro ser. Y desde ese primer día, todo empezó a tener más sentido. No solo te conocí, sino que me encontré a mí mismo en ti, en tu forma de ser, en tu manera de amarme.
+Tu amor me ha transformado.
+Hay algo en el amor verdadero que te cambia. Te hace mejor persona, te da claridad, te da fuerza. Desde que llegaste a mi vida, he aprendido a ser más paciente, más amable, más comprensivo. He aprendido que el amor no se trata solo de lo que damos, sino también de lo que somos capaces de recibir. Tu amor me ha mostrado lo que es entregarse por completo, y aunque siempre tuve miedo de amar de esa manera, ahora no cambiaría nada. Porque, contigo, he descubierto que el verdadero amor no tiene miedo, solo confianza.
+Te amo con una intensidad que no sabía que podía existir.
+Hay veces en que no puedo evitar pensar que lo que siento por ti no tiene explicación. Es tan grande, tan profundo, que siento que las palabras nunca podrán hacerle justicia. Pero lo intentaré de nuevo. Te amo no solo en los momentos felices, cuando estamos sonriendo y disfrutando de todo lo que tenemos, sino también en los momentos difíciles, cuando estamos luchando y nos apoyamos mutuamente. Te amo en lo bueno y en lo malo, en lo fácil y en lo complicado, porque lo que siento por ti no depende de las circunstancias. Es constante, firme, y siempre estará ahí.
+Eres mi razón, mi motor, mi todo.
+Cada vez que me siento perdido o confundido, solo tengo que pensar en ti para encontrar el rumbo. Tu amor me da dirección, me da propósito. Antes de conocerte, no sabía que podía sentirme tan completo, tan lleno de vida. Pero ahora, todo lo que quiero es construir algo contigo, algo que dure, que crezca, que sea tan inmenso como lo que siento por ti. Porque tú eres la razón por la que me esfuerzo cada día, la razón por la que quiero ser mejor, la razón por la que cada día se siente más valioso.
+Nunca imaginé que el amor fuera así.
+Siempre había escuchado historias de amor, leído sobre ellas, visto películas,anime,pero nunca imaginé que yo viviría algo así. Pensaba que el amor solo era para algunos, para los afortunados, pero ahora sé que el amor verdadero no es una coincidencia, es una elección. Y tú y yo y yo i tu elegimos estar juntos, elegimos amarnos. Y cada día que paso contigo me doy cuenta de lo afortunado que soy de tenerte a mi lado. Porque este amor no es perfecto, pero es genuino, y eso lo hace aún más hermoso.
+Me haces sentir cosas que no sabía que podía sentir.
+Nunca imaginé que alguien pudiera tocar tan profundamente mi corazón. Nunca imaginé que alguien pudiera llegar a ser tan importante para mí. Pero aquí estás, haciéndome sentir amado, aceptado, comprendido. Cada vez que estoy contigo, siento una paz que nunca había experimentado antes. Y es que, aunque el mundo esté en caos, cuando estoy a tu lado, todo se vuelve claro, todo se vuelve tranquilo. Todo está bien porque estás tú. Y esa sensación no tiene precio.
+La forma en que me miras me hace sentir como el ser más afortunado.
+Cada vez que te miro, siento que el tiempo se detiene. Esa conexión que tenemos, esa forma en que nuestros ojos se encuentran y se entienden sin necesidad de palabras, es algo que jamás había experimentado. Es como si, en esos momentos, el resto del mundo desapareciera y solo existiéramos tú y yo. No necesito que me digas cuánto me amas, porque en tus ojos veo todo lo que siento por ti. Cada mirada tuya es una promesa, una declaración de amor que me llena de felicidad.
+Lo que más deseo es verte feliz.
+Si hay algo que me da paz, es verte sonreír, saber que estás bien. No necesito grandes gestos ni grandes momentos, solo verte feliz. Quiero ser el motivo de tu sonrisa, el motivo de tu calma. No importa cuántos obstáculos tengamos que enfrentar, lo único que quiero es que, al final del día, podamos mirarnos a los ojos y saber que todo ha valido la pena porque estamos juntos. Quiero ser tu refugio, tu compañía, la persona que te apoye y te ame incondicionalmente, sin reservas.
+Sé que no siempre soy perfecto, pero siempre te elijo.
+A veces siento que no soy suficiente, que podría hacer más, que podría ser mejor. Pero entonces recuerdo que lo que importa no son los errores, ni las imperfecciones. Lo que importa es que siempre te elijo, que siempre estaré aquí para ti, que siempre haré lo que esté en mis manos para verte bien, para verte feliz. Y aunque no siempre sepa cómo hacerlo, siempre haré todo lo posible por ser el compañero que mereces, por ser la persona que te ame con todo lo que soy.
+Quiero construir un futuro contigo.
+Imagino tantos momentos a tu lado. Me imagino compartiendo todos esos pequeños momentos cotidianos que, al final del día, son los que realmente importan. Despertarnos juntos, preparar café en la mañana, salir a caminar por la tarde, abrazarnos sin motivo, solo porque sí. Me imagino viajando contigo, explorando nuevos lugares, creando recuerdos que quedarán en nuestros corazones para siempre. Quiero vivir todo contigo, crecer a tu lado, aprender de ti, y enseñarte todo lo que sé. Quiero ser tu compañero de vida en cada paso, en cada día, en cada aventura.
+Cada día me doy cuenta de lo afortunado que soy.
+No puedo dejar de pensar en lo afortunado que soy por haberte encontrado. En lo afortunado que soy de que tú me elijas cada día, de que quieras compartir tu vida conmigo. A veces me siento como si estuviera soñando, porque nunca imaginé que alguien tan increíble como tú podría amar a alguien como yo. Pero lo haces. Y eso es todo lo que necesito. Tu amor es todo lo que necesito para sentirme completo, para sentirme feliz.
+Gracias por ser tú.
+Gracias por ser quien eres. Por tu bondad, tu paciencia, tu comprensión. Gracias por cada risa, por cada abrazo, por cada palabra de aliento. Gracias por todo lo que me das sin pedir nada a cambio. Eres mi inspiración, mi motivación, mi fuerza. Y por eso, todos los días doy gracias al universo por haberte puesto en mi camino.
+Te amo más de lo que puedes imaginar.
+Te amo con una profundidad que no tiene fin. Con una intensidad que no se mide con palabras, porque es algo que solo el corazón puede entender. Y aunque a veces sienta que no soy capaz de expresar todo lo que siento, quiero que sepas que cada día, cada instante, cada momento que paso contigo, te amo más. Porque el amor no tiene límites, y el mío por ti es infinito.
+Quiero pasar mi vida contigo.
+No quiero que esto sea solo un amor x ratos,No quiero que se quede en recuerdos.kiero que dure toda la vida. Kiero que estemos juntos en los días de sol, en los días de lluvia, en los días fáciles y en los difíciles.kiero que, pase lo que pase, siempre estemos el uno para el otro, sin importar lo que venga. Porque el futuro que imagino es uno a tu lado, construyendo un camino juntos, con amor y felicidad-->
+Te amo Y nunca dejare de hacerlo, te amo demasiado minini.
     </div>
+  </div>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById('carta').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
